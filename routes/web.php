@@ -15,9 +15,10 @@ Route::get('/', function () {
     return view('top');
 });
 
-Auth::routes();
+Route::get('/show/{id}', 'ProfileController@show')->name('profile');
+Route::get('/edit/{id}', 'ProfileController@edit')->name('profile.edit');
+Route::post('/update/{id}', 'ProfileController@update')->name('profile.update');
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
