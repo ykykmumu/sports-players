@@ -10,7 +10,7 @@ class ProfileController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-        return view('profiles.profile', ['user' => $user]);
+        return view('profiles.profile', compact('user'));
     }
 
     public function edit($id)
