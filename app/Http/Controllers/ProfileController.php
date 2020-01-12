@@ -25,7 +25,7 @@ class ProfileController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->save();
-        return redirect()->to('home');
+        return redirect()->route('profile', ['id' => $user])->with('result', ' 変更しました！');
     }
 
 }
