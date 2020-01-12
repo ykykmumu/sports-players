@@ -15,17 +15,19 @@
     <div class="card">
       <div class="card-header">
         <h3 class="card-title">
-          username
+        {{ $user->name }}
         </h3>
       </div>
       <div class="card-body" id="user_image">
-          <img src="">
+          <img alt="" class="" src="">
       </div>
     </div>
     <div class="pt-2">
      
     </div>
   </aside>
+
+
   <div class="col-sm-8">
     <ul class="nav nav-tabs nav-justified mb-3">
       <li class="nav-item"><a href="" class="nav-link ">参加履歴</a></li>
@@ -63,7 +65,6 @@
 </div>
 
     <div class="text-center">
-        <button type="submit" class="btn submitBtn">プロフィール編集</button>
         <div class="linkToLogout">
             <a href="{{ route('logout') }}">ログアウト</a>
         </div>

@@ -19,7 +19,10 @@ Route::get('/show/{id}', 'ProfileController@show')->name('profile');
 Route::get('/edit/{id}', 'ProfileController@edit')->name('profile.edit');
 Route::post('/update/{id}', 'ProfileController@update')->name('profile.update');
 
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'PostsController@index');
+
+Route::get('/posts/new', 'PostsController@new')->name('new');
+
+Route::post('/posts', 'PostsController@store');
