@@ -11030,3 +11030,39 @@ body {
   font-size: 11px;
 }
 
+.contents_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contents_box {
+  margin-bottom: 3rem;
+  padding: 3rem;
+  width: 32%;
+  background-color: #f0f0f0;
+}
+
+.contents_box img {
+  display: block;
+  margin-bottom: 3rem;
+  width: 100%;
+  height: auto;
+}
+
+.contents_box h2 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .contents_wrap {
+    flex-direction: column;
+  }
+
+  .contents_box {
+    width: 100%;
+  }
+}
+

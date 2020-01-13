@@ -1,0 +1,41 @@
+
+.index{
+    .contents{
+    &_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &_box {
+        margin-bottom: 3rem;
+        padding: 3rem;
+        width: 32%;
+        background-color: #f0f0f0;
+    }
+
+    &_box img {
+        display: block;
+        margin-bottom: 3rem;
+        width: 100%;
+        height: auto;
+    }
+
+    &_box h2 {
+        margin-bottom: 2rem;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+}
+    @media screen and (max-width: 768px){
+        .contents{
+            &_wrap {
+            flex-direction: column;
+            }
+
+            &_box {
+                width: 100%;
+            }
+        }
+    }
+}
