@@ -12,7 +12,10 @@ class PostsController extends Controller
 {
     public function index()
     {
-        return view('post/index');
+        $posts = Post::orderBy('id','desc')->first();
+        return view('post/index', [
+            'posts' => $posts,
+        ]);
     }
 
     public function new()
@@ -37,7 +40,7 @@ class PostsController extends Controller
 
         $post->save();
         
-        return redirect('/');
+        return redirect('/home');
     }
 
 }

@@ -2,14 +2,13 @@
 
 @section('content')
 
-    <div class="signupPage">
-        <header class="header">
-            <h1>アカウントを作成</h1>
-        </header>
-    </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
 
-    <div class="row mt-5 mb-5">
-        <div class="col-sm-6 offset-sm-3">
+　          <div class="card">
+            <div class="card-header signupPage">新規登録</div>
+            <div class="card-body">
 
             <form method="POST" action="{{route('register')}}" >
            　　 {{ csrf_field() }}
@@ -24,9 +23,9 @@
               </div>
 
 
-                <div class="form-group @error('name')has-error @enderror">
-                <label for="name">名前 </label>
-                <input type="text" name="name" value="{{old('name')}}" class="form-control" placeholder="名前を入力してください">
+                <div class="form-group row @error('name')has-error @enderror">
+                <label for="name" class="col-sm-3">名前 </label>
+                <input type="text" name="name" value="{{old('name')}}" class="form-control col-sm-7" placeholder="名前を入力してください">
                 @error('name')
                 <span class="errorMessage">
                 {{ $message }}
@@ -63,10 +62,11 @@
                 </div>
             </form>
         
-
+            </div>
+            </div>
+            </div>
         </div>
     </div>
-
-
+</div>
 
 @endsection

@@ -1,41 +1,33 @@
+.body{
+    margin: 0;
+}
 
-.index{
-    .contents{
-    &_wrap {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+.main{
+    padding: 0;
+}
 
-    &_box {
-        margin-bottom: 3rem;
-        padding: 3rem;
-        width: 32%;
-        background-color: #f0f0f0;
-    }
 
-    &_box img {
-        display: block;
-        margin-bottom: 3rem;
-        width: 100%;
-        height: auto;
-    }
-
-    &_box h2 {
-        margin-bottom: 2rem;
-        font-size: 2.2rem;
-        text-align: center;
+.containter{
+    background:url(http://placehold.jp/1000x700.png) no-repeat 50% 50%/cover;
+    h1{
+        margin: 0px;
     }
 }
-    @media screen and (max-width: 768px){
-        .contents{
-            &_wrap {
-            flex-direction: column;
-            }
 
-            &_box {
-                width: 100%;
-            }
-        }
+
+
+
+
+.list{
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+	justify-content: space-around;
+	 -webkit-flex-wrap: wrap;
+  	flex-wrap:         wrap;
+    &_content{
+        display: flex;
+        align-items:stretch;
+        flex-basis: 48%;
     }
 }
