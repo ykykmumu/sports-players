@@ -2,6 +2,15 @@
 
 
 @section('content') 
+
+
+@if (session('result'))
+<div class="card text-center">
+  {{ session('result') }}
+</div>
+@endif
+
+
 <div class="Profile"> 
 
  <div class="container">
