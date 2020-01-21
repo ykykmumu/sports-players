@@ -12,9 +12,17 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::orderBy('id','desc')->first();
+        $posts = Post::orderBy('id','desc')->get();
         return view('post/index', [
             'posts' => $posts,
+        ]);
+    }
+
+    public function show($sport)
+    {
+        $sports = Post::where('sport', $sport)->get();
+        return view('post/show', [
+            'sports' => $sports,
         ]);
     }
 
