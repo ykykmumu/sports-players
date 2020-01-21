@@ -10910,7 +10910,7 @@ body {
 .signupPage .header {
   padding: 20px;
   text-align: center;
-  background: #fd5068;
+  background: #55665a52;
   color: #fff;
 }
 
@@ -10976,7 +10976,7 @@ body {
 }
 
 .signupPage .submitBtn {
-  background: #fd5068;
+  background: #55665a52;
   color: #fff;
   width: 200px;
   padding: 10px;
@@ -11004,7 +11004,7 @@ body {
 .profile_contents {
   padding: 20px;
   text-align: center;
-  background: #fd5068;
+  background: #55665a52;
   color: #fff;
 }
 
@@ -11028,5 +11028,83 @@ body {
 
 .profile .userImgPreview_text {
   font-size: 11px;
+}
+
+.create_content {
+  border-bottom: 2px solid #bfcad2;
+  background-color: #fff;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.create_title {
+  font-size: 2rem;
+  color: #34495e;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.upload {
+  display: block;
+  margin-top: 0em;
+}
+
+fieldset {
+  background: transparent;
+  border: 0;
+  border-top: 1px dotted #ccc;
+  padding: 1em 0 0;
+}
+
+dl {
+  line-height: 1.25;
+  margin: 0;
+  display: block;
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+}
+
+dl:first-child dt {
+  margin-top: 0;
+}
+
+.upload dd {
+  margin-left: 0;
+}
+
+.body {
+  margin: 0;
+}
+
+.main {
+  padding: 0;
+}
+
+.containter {
+  background: url(http://placehold.jp/1000x700.png) no-repeat 50% 50%/cover;
+}
+
+.containter h1 {
+  margin: 0px;
+}
+
+.list {
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.list_content {
+  display: flex;
+  align-items: stretch;
+  flex-basis: 48%;
 }
 

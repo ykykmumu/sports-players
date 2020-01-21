@@ -23,6 +23,8 @@ Auth::routes();
 
 Route::get('/home', 'PostsController@index');
 
+Route::get('/home/{sport}', 'PostsController@show');
+
 Route::get('/posts/new', 'PostsController@new')->name('new');
 
 Route::post('/posts', 'PostsController@store');

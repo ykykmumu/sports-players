@@ -1,0 +1,33 @@
+.body{
+    margin: 0;
+}
+
+.main{
+    padding: 0;
+}
+
+
+.containter{
+    background:url(http://placehold.jp/1000x700.png) no-repeat 50% 50%/cover;
+    h1{
+        margin: 0px;
+    }
+}
+
+
+
+
+
+.list{
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+	justify-content: space-around;
+	 -webkit-flex-wrap: wrap;
+  	flex-wrap:         wrap;
+    &_content{
+        display: flex;
+        align-items:stretch;
+        flex-basis: 48%;
+    }
+}

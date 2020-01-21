@@ -5,7 +5,10 @@
 
 <div class="containter text-center">
     <h1>プレイヤーを探そう</h1>
-    
+    <form method="POST" action="" target="">
+        <input class="textbox" type="text" name="search" placeholder="プレイヤーを探す">
+        <input type="button" value="検索する">
+    </form>
 </div>
 
 
@@ -15,17 +18,15 @@ tinkerで作った物しか反映されていない
 
 <ul class="list">
                 <li class="list_content">
-                <a href="/home/baseball">野球 <img src="http://placehold.jp/150x150.png" alt=""></a>
-                <a href="/home/tennis">テニス <img src="http://placehold.jp/150x150.png" alt=""></a>
-                <a href="/home/soccer">サッカー <img src="http://placehold.jp/150x150.png" alt=""></a>
-                <a href="/home/rugby">ラグビー <img src="http://placehold.jp/150x150.png" alt=""></a>
-                <a href="/home/swimming">水泳 <img src="http://placehold.jp/150x150.png" alt=""></a>
-                <a href="/home/basketball">バスケットボール <img src="http://placehold.jp/150x150.png" alt=""></a>
-                <a href="/home/golf">ゴルフ <img src="http://placehold.jp/150x150.png" alt=""></a>
+                    @foreach ($sports as $sport)
+                    <div class="img"><figure><img src="http://placehold.jp/150x150.png" alt=""></figure></div>
+                    <div class="txt col-sm-10">
+                        <h4>{{ $sport->caption }}</h4>
+                        <h4>{{ $sport->place }}</h4>
+                        <h4>{{ $sport->cost }}</h4>
+                     @endforeach
+                    </div>
                 </li>
-
-
-
 
                 <!-- <li class="list_content">
                 

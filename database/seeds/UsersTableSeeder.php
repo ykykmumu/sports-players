@@ -11,6 +11,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        factory(App\Post::class, 30)->create();
+
         // $param = [
         //     'name' => 'smith',
         //     'email' => 'smith@gmail.com',
