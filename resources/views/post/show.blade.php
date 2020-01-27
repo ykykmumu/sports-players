@@ -5,54 +5,35 @@
 
 <div class="containter text-center">
     <h1>プレイヤーを探そう</h1>
-    <form method="POST" action="" target="">
-        <input class="textbox" type="text" name="search" placeholder="プレイヤーを探す">
-        <input type="button" value="検索する">
+    <form method="POST" class="form-group" action="" target="">
+      <input type="text" name="keyword" value="{{ isset($keyword) ? $keyword : '' }}">
+      <input type="submit" value="検索する">
     </form>
 </div>
 
+<div class="container row justify-content-between mx-auto">
+@foreach ($sports as $sport)
+<div class="card col-md-6 my-sm-5" style="max-width: 500px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="http://placehold.jp/150x150.png" class="card-img rounded-circle" alt="">
+      
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ $sport->caption }}</h5>
+        <p class="card-text">{{ $sport->place }}</p>
+        <p class="card-text">{{ $sport->cost }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+@endforeach
+</div>
 
-一つの投稿しか反映されない
-ページネーション
-tinkerで作った物しか反映されていない
-
-<ul class="list">
-                <li class="list_content">
-                    @foreach ($sports as $sport)
-                    <div class="img"><figure><img src="http://placehold.jp/150x150.png" alt=""></figure></div>
-                    <div class="txt col-sm-10">
-                        <h4>{{ $sport->caption }}</h4>
-                        <h4>{{ $sport->place }}</h4>
-                        <h4>{{ $sport->cost }}</h4>
-                     @endforeach
-                    </div>
-                </li>
-
-                <!-- <li class="list_content">
-                
-                </li>
-
-                <li class="list_content">
-                    <div class="img"><figure><img src="http://placehold.jp/150x150.png" alt=""></figure></div>
-                    <div class="txt col-sm-10">
-                        <p class="date">投稿日時</p>
-                        <h4>キャプション</h4>
-                        <h4>場所</h4>
-                        <h4>値段</h4>
-                    </div>
-                </li>
-
-                <li class="list_content">
-                    <div class="img"><figure><img src="http://placehold.jp/150x150.png" alt=""></figure></div>
-                    <div class="txt col-sm-10">
-                        <p class="date">投稿日時</p>
-                        <h4>キャプション</h4>
-                        <h4>場所</h4>
-                        <h4>値段</h4>
-                    </div>
-                </li> -->
-</ul>
-
+<div class="paginate text-center">
+{{ $sports->links('pagination::bootstrap-4') }}
+</div>
 
 @endsection
 

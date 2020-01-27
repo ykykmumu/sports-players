@@ -23,8 +23,16 @@ Auth::routes();
 
 Route::get('/home', 'PostsController@index');
 
+Route::get('/home/search', 'SearchController@getIndex')->name('search');
+
 Route::get('/home/{sport}', 'PostsController@show');
 
 Route::get('/posts/new', 'PostsController@new')->name('new');
 
 Route::post('/posts', 'PostsController@store');
+
+
+
+Route::get('/image_input', 'ImageController@getImageInput');
+Route::post('/image_confirm', 'ImageController@postImageConfirm');
+Route::post('/image_complete', 'ImageController@postImageComplete');

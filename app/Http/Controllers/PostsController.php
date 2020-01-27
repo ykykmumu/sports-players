@@ -20,7 +20,7 @@ class PostsController extends Controller
 
     public function show($sport)
     {
-        $sports = Post::where('sport', $sport)->get();
+        $sports = Post::where('sport', $sport)->paginate(8);
         return view('post/show', [
             'sports' => $sports,
         ]);
@@ -41,6 +41,7 @@ class PostsController extends Controller
         }
 
         $post = new Post;
+        $post->sport = $request->sport;
         $post->caption = $request->caption;
         $post->user_id = Auth::user()->id;
         $post->place = $request->place;

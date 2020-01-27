@@ -9,25 +9,24 @@
 
 .containter{
     background:url(http://placehold.jp/1000x700.png) no-repeat 50% 50%/cover;
+    padding: 100px 0;
     h1{
         margin: 0px;
     }
 }
 
-
-
-
-
-.list{
-    margin: auto;
-    margin-top: 50px;
+.list {
+    overflow: auto;
+    scroll-snap-type: x;
     display: flex;
-	justify-content: space-around;
-	 -webkit-flex-wrap: wrap;
-  	flex-wrap:         wrap;
-    &_content{
-        display: flex;
-        align-items:stretch;
-        flex-basis: 48%;
-    }
 }
+.indexbox {
+    scroll-snap-align: start;
+    height: 10vh;
+    width: 10vw;
+    flex: none;
+}
+
+
+
+

@@ -41,4 +41,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Post');
     }
+
+    public function get()
+    {
+        $results = Post::all();
+        return $results;
+    }
 }
+
+
