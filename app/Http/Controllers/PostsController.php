@@ -18,12 +18,21 @@ class PostsController extends Controller
         ]);
     }
 
-    public function show($sport)
+    public function show($sport, Request $request)
     {
         $sports = Post::where('sport', $sport)->paginate(8);
-        return view('post/show', [
-            'sports' => $sports,
-        ]);
+        if($request->has('keyword')) {
+            $posts = Post::where('caption', 'like', '%'.$request->get('keyword').'%')->paginate(8);
+            var_dump($posts);exit;
+        }else
+        {
+            $posts = Post::paginate(4);
+        }
+
+        return view('post.show', compact('posts','sports'));
+
+        $sports = Post::where('sport', $sport)->paginate(8);
+        
     }
 
     public function new()

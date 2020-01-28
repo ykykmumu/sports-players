@@ -8,7 +8,8 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">プロフィール編集</div>
-                  <form method="POST" action="/update/{{ $user->id }}">
+                  <form method="POST" action="/update/{{ $user->id }}">                  
+                  @csrf
                     <div class="card-body row">
                         @csrf
                         <div class="col-md-3">

@@ -10,17 +10,16 @@ class SearchController extends Controller
 {
     public function getIndex(Request $request)
     {
-        $keyword = $request->input('keyword');
-        if(!empty($keyword))
-        {
-            $posts = DB::table('posts')
-            ->where('caption', 'like', '%'.$keyword.'%')
-            ->paginate(8);
+        $sports = Post::where('sport', $sport)->paginate(8);
+        if($request->has('keyword')) {
+            $posts = Post::where('caption', 'like', '%'.$request->get('keyword').'%')->paginate(8);
+            var_dump($posts);exit;
         }else
         {
-            $posts = DB::table('posts')->paginate(4);
+            $posts = Post::paginate(4);
+            var_dump($posts);exit;
         }
 
-        return view('post.show', compact('posts','keyword'));
+        return view('post.show', compact('posts','sports'));
     }
 }

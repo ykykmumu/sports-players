@@ -4,6 +4,8 @@
 @section('content') 
 <div class="loginPage"> 
 
+<img class="logo" src="{{asset('temp/image1.jpg')}}" alt="logo">
+
  <div class="container">
 
   <div class="loginPage_contents">

@@ -23,8 +23,6 @@ Auth::routes();
 
 Route::get('/home', 'PostsController@index');
 
-Route::get('/home/search', 'SearchController@getIndex')->name('search');
-
 Route::get('/home/{sport}', 'PostsController@show');
 
 Route::get('/posts/new', 'PostsController@new')->name('new');
