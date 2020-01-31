@@ -10876,6 +10876,13 @@ a.text-dark:focus {
   }
 }
 
+.loginPage_image {
+  background-image: url(/images/image3.jpg?84a22b6882370deb72cdcbef05c3232b);
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+}
+
 .loginPage_contents {
   height: 80vh;
   display: flex;
@@ -10886,20 +10893,27 @@ a.text-dark:focus {
 
 .loginPage_contents_title {
   margin-top: 12vh;
+  color: #fff;
+  font-family: bold;
 }
 
 .loginPage_contents_btn {
   display: block;
-  max-width: 400px;
+  max-width: 300px;
   padding: 20px;
   margin: 0 auto;
   border-radius: 30px;
   background: #fd5068;
   color: #fff;
+  margin-top: 12vh;
 }
 
 body {
   overflow: visible;
+}
+
+main {
+  margin-top: 30px;
 }
 
 .notice,
@@ -11036,7 +11050,7 @@ body {
 
 .create_content {
   border-bottom: 2px solid #bfcad2;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.03);
   display: block;
   margin-bottom: 20px;
 }
@@ -11091,7 +11105,10 @@ dl:first-child dt {
 }
 
 .containter {
-  background: url(http://placehold.jp/1000x700.png) no-repeat 50% 50%/cover;
+  background-image: url(/images/image4.jpg?4168479a30a397d0e26be0a34b8f5be9);
+  width: 100%;
+  height: 300px;
+  background-size: contain;
   padding: 100px 0;
 }
 
@@ -11099,22 +11116,9 @@ dl:first-child dt {
   margin: 0px;
 }
 
-.list {
-  overflow: auto;
-  -ms-scroll-snap-type: x;
-      scroll-snap-type: x;
-  display: flex;
-}
-
-.indexbox {
-  scroll-snap-align: start;
-  height: 10vh;
-  width: 10vw;
-  flex: none;
-}
-
-.pagination {
-  text-align: center;
+.list_item {
+  height: 100px;
+  width: 100px;
 }
 
 body {

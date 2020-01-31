@@ -45,7 +45,7 @@
         </div>
     </div>
 </div>
-
+<a href="/home" class="row justify-content-center">戻る</a>
 @endsection
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\User;
 use Auth;
 use Validator;
 
@@ -21,9 +22,9 @@ class PostsController extends Controller
     public function show($sport, Request $request)
     {
         $sports = Post::where('sport', $sport)->paginate(8);
+        
         if($request->has('keyword')) {
-            $posts = Post::where('caption', 'like', '%'.$request->get('keyword').'%')->paginate(8);
-            var_dump($posts);exit;
+            $posts = Post::where('place', 'like', '%'.$request->get('keyword').'%')->paginate(8);
         }else
         {
             $posts = Post::paginate(4);
@@ -31,7 +32,7 @@ class PostsController extends Controller
 
         return view('post.show', compact('posts','sports'));
 
-        $sports = Post::where('sport', $sport)->paginate(8);
+        
         
     }
 
@@ -61,4 +62,13 @@ class PostsController extends Controller
         return redirect('/home');
     }
 
+    public function person($sport, $id)
+    {
+        $sports = Post::where('sport', $sport)->get();
+        $id = Post::find($id);
+        return view('post.person', [
+        'sport' => $sport,
+        'id' => $id,
+        ]);
+    }
 }

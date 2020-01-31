@@ -29,6 +29,9 @@ Route::get('/posts/new', 'PostsController@new')->name('new');
 
 Route::post('/posts', 'PostsController@store');
 
+Route::get('/home/{sport}/person/{id}', 'PostsController@person')->name('person');
+
+
 
 
 Route::get('/image_input', 'ImageController@getImageInput');

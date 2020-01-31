@@ -16,7 +16,7 @@
                             <label for="file_photo" class="rounded-circle userProfileImg">
                                 <div class="userProfileImg_description">画像をアップロード</div>
                                 <i class="fas fa-camera fa-3x"></i>
-                                <input type="file" id="file_photo" name="image">
+                                <input type="file" id="file_photo" name="img_name">
                             </label>
                                 <div class="userImgPreview" id="userImgPreview">
                                     <img id="thumbnail" class="userImgPreview_content" accept="image/*" src="">
