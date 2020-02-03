@@ -11100,8 +11100,8 @@ dl:first-child dt {
   margin: 0;
 }
 
-.main {
-  padding: 0;
+main {
+  margin-top: 0px;
 }
 
 .containter {
@@ -11116,9 +11116,36 @@ dl:first-child dt {
   margin: 0px;
 }
 
+.list {
+  margin: 0 auto;
+  width: 980px;
+}
+
+.list_content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list_items {
+  min-height: 100px;
+  width: calc(100% / 3);
+  text-align: center;
+}
+
 .list_item {
-  height: 100px;
-  width: 100px;
+  padding: 5px;
+}
+
+.list_text {
+  text-align: center;
+  margin: 20px auto 15px;
+  font-size: 18px;
+  padding: 15px 20px;
+  width: 280px;
+  background: #eee;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {

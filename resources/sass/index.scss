@@ -2,8 +2,8 @@
     margin: 0;
 }
 
-.main{
-    padding: 0;
+main{
+    margin-top: 0px;
 }
 
 
@@ -19,11 +19,31 @@
 }
 
 .list{
-    &_item{
-        height: 100px;
-        width: 100px;
-        // color:rgb(0, 57, 255);
+    margin: 0 auto;
+    width: 980px;
+    &_content{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
+        &_items{
+            min-height: 100px;
+            width: calc(100% / 3);
+            text-align: center;
+        }
+            &_item{
+                padding: 5px;
+            }
+                &_text{
+                    text-align: center;
+                    margin: 20px auto 15px;
+                    font-size: 18px;
+                    padding: 15px 20px;
+                    width: 280px;
+                    background: #eee;
+                    box-sizing: border-box;
+                    text-decoration: none;
+                }
 }
 
 

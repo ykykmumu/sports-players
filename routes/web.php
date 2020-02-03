@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/show/{id}', 'ProfileController@show')->name('profile');
 Route::get('/edit/{id}', 'ProfileController@edit')->name('profile.edit');
 Route::post('/update/{id}', 'ProfileController@update')->name('profile.update');
+Route::post('/delete/{id}', 'ProfileController@destroy')->name('profile.delete');
 
 Auth::routes();
 
@@ -30,6 +31,8 @@ Route::get('/posts/new', 'PostsController@new')->name('new');
 Route::post('/posts', 'PostsController@store');
 
 Route::get('/home/{sport}/person/{id}', 'PostsController@person')->name('person');
+
+Route::get('/home/{sport}/edit/{id}', 'PostsController@edit')->name('post.edit');
 
 
 

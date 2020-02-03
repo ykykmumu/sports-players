@@ -56,7 +56,8 @@ class PostsController extends Controller
         $post->user_id = Auth::user()->id;
         $post->place = $request->place;
         $post->cost = $request->cost;
-
+        $post->comment = $request->comment;
+        
         $post->save();
         
         return redirect('/home');
@@ -64,11 +65,25 @@ class PostsController extends Controller
 
     public function person($sport, $id)
     {
-        $sports = Post::where('sport', $sport)->get();
-        $id = Post::find($id);
+        $posts = Post::all();
+        $sports = Post::where('sport', $sport)->first();
+        $id = User::find($id);
         return view('post.person', [
-        'sport' => $sport,
+        'posts' => $posts,
+        'sports' => $sports,
         'id' => $id,
         ]);
+    }
+
+    public function edit($sport, $id)
+    {
+        $posts = Post::all();
+        $sports = Post::where('sport', $sport)->first();
+        $id = User::find($id);
+        return view('post.postEditer', [
+            'posts' => $posts,
+            'sports' => $sports,
+            'id' => $id,
+            ]);
     }
 }

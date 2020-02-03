@@ -32,4 +32,15 @@ class ProfileController extends Controller
         $user->save();
         return redirect()->route('profile', ['id' => $user]);
     }
+
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+
+        if (\Auth::id() == $user->id) {
+            $user->delete();
+        }
+        return back();
+    }
+
 }

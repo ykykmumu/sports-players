@@ -23,5 +23,8 @@
   <a href="https://pngtree.com/free-backgrounds">free background photos from pngtree.com</a>
 </div> 
 
+iconのhrefにauth::checkで行けるのは分かるけどもっと簡単な方法あるか
+@include('commons.icon')
+
     
 @endsection

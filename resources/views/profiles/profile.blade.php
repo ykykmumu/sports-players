@@ -37,14 +37,21 @@
                             <a class="btn btn-primary btn-sm mb-1" href="/edit/{{$user->id}}">プロフィールの編集</a>
                           </div>
                           <div class="text-center">
-                              <div class="linkToLogout">
-                                  <a href="{{ route('logout') }}">ログアウト</a>
+                            <form action="/delete/{{$user->id}}" method="DELETE">
+                            {{ csrf_field() }}
+                              <div class="destroy">
+                                  <button type="submit" class="btn btn-danger">アカウント削除</a>
                               </div>
+                            </form>
                           </div>
-                        @endif
+                        @endif   
             </div>
         </div>
     </div>
+</div>
+
+<div>
+  <h1>投稿一覧</h1>
 </div>
 
 <a href="/home" class="row justify-content-center">戻る</a>
