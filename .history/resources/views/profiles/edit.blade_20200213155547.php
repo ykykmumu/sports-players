@@ -11,17 +11,12 @@
                   <form method="POST" action="/update/{{ $user->id }}"　enctype="multipart/form-data">                  
                   @csrf
                     <div class="card-body row">
-                      
-                    <label for="file_photo" class="rounded-circle userProfileImg">
-                                <div class="userProfileImg_description">画像をアップロード</div>
-                                <i class="fas fa-camera fa-3x"></i>
-                                <input type="file" id="file_photo" name="img_name">
-                    </label>
-                        <div class="userImgPreview" id="userImgPreview">
-                            <img id="thumbnail" class="userImgPreview_content" accept="image/*" src="">
-                            <p class="userImgPreview_text">画像をアップロード済み</p>
-                        </div>
-                        
+                        @csrf
+                           
+                                <input type="file" class="form-control" name="img_name">
+                                <hr>
+                                
+                            
                     　　 <div class="col-md-9">
                           <div class="form-group row">
                               <label for="name" class="col-md-4 col-form-label text-md-right">名前</label>

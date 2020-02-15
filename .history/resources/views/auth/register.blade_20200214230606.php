@@ -36,7 +36,7 @@
                             <div class="form-group row @error('email')has-error @enderror">
                                 @error('email')
                                 <span class="errorMessage col-9 offset-3 text-left">
-                                {{ $message }}
+                                {{ $errors }}
                                 </span>
                                 @enderror
                                 <label for="email" class="col-sm-3">メールアドレス </label>

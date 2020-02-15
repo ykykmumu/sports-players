@@ -26,7 +26,7 @@
                     
                             <div class="form-group row @error('name')has-error @enderror">
                                 @error('name')
-                                <span class="errorMessage col-9 offset-3 text-left">
+                                <span class="errorMessage">
                                 {{ $message }}
                                 </span> 
                                 @enderror
@@ -34,22 +34,22 @@
                                 <input type="text" name="name" value="{{old('name')}}" class="form-control col-sm-7" placeholder="名前を入力してください">
                             </div>
                             <div class="form-group row @error('email')has-error @enderror">
-                                @error('email')
-                                <span class="errorMessage col-9 offset-3 text-left">
-                                {{ $message }}
-                                </span>
-                                @enderror
                                 <label for="email" class="col-sm-3">メールアドレス </label>
                                 <input type="email" name="email" value="{{old('email')}}" class="form-control col-sm-7" placeholder="メールアドレスを入力してください">
-                            </div>
-                            <div class="form-group row @error('password')has-error @enderror">
-                                @error('password')
-                                <span class="errorMessage col-9 offset-3 text-left">
+                                @error('email')
+                                <span class="errorMessage">
                                 {{ $message }}
                                 </span>
                                 @enderror
+                            </div>
+                            <div class="form-group row @error('password')has-error @enderror">
                                 <label for="password" class="col-sm-3">パスワード </label>
                                 <input type="password" name="password"  class="form-control col-sm-7" placeholder="パスワードを入力してください">
+                                @error('password')
+                                <span class="errorMessage">
+                                {{ $message }}
+                                </span>
+                                @enderror
                             </div>
                             <div class="form-group row">
                                 <label for="password_confirmation" class="col-sm-3">パスワード確認 </label>

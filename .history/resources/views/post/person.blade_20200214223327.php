@@ -22,9 +22,9 @@
       <div class="row">
         <div class="col-md-4">
           @if(!empty($sports->user->img_name))
-            <div class='image-wrapper'><img src="{{ asset($sports->user->img_name) }}" class="card-img rounded-circle img-responsive"　style= max-width: 100%;> </div>
+            <div class='image-wrapper'><img src="{{ asset($sports->user->img_name) }}" class="card-img rounded-circle img-responsive"　style="max-width: 100%;> </div>
           @else
-            <div class='image-wrapper'><img src="{{ Gravatar::src($sports->user->email, 500) }}" class="card-img rounded-circle"> </div>
+            <div class='image-wrapper'><img src="{{ Gravatar::src($sports->user->email, 500) }}" class="card-img rounded-circle" alt=""> </div>
           @endif
           　<div class="card-text text-center">{{ $user->introduce }}</div>
         </div>
