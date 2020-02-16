@@ -35,7 +35,6 @@ class ProfileController extends Controller
         $user->img_name = $request->file('img_name')->store('temp', 'public');
         $user->introduce = $request->introduce;
         $user->save();
-
         return redirect()->route('profile', ['id' => $user]);
     }
 

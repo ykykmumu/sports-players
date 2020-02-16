@@ -32,6 +32,7 @@ class ProfileController extends Controller
         $user = User::findOrFail($id);
         $user->name = $request->name;
         $user->email = $request->email;
+        dd($request);
         $user->img_name = $request->file('img_name')->store('temp', 'public');
         $user->introduce = $request->introduce;
         $user->save();

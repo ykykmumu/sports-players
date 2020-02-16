@@ -33,6 +33,7 @@ class ProfileController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->img_name = $request->file('img_name')->store('temp', 'public');
+        dd($request);
         $user->introduce = $request->introduce;
         $user->save();
 

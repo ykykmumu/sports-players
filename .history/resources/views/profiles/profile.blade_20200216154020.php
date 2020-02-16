@@ -56,7 +56,7 @@
     </div>
 </div>
 
-<div class="mypost">
+<div>
   <h1 class="container pt-10">投稿一覧</h1>
     @foreach ($sports as $sport)
       <div class="row">
@@ -102,7 +102,7 @@
 <div class="row justify-content-center">
 {{ $sports->links() }}
 </div>
-
+</div>
 
 <a href="/home" class="row justify-content-center">戻る</a>
 @endsection

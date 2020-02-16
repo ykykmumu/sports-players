@@ -11063,6 +11063,10 @@ main {
   font-size: 11px;
 }
 
+.profile dt {
+  font-size: 20px;
+}
+
 .create_content {
   border-bottom: 2px solid #bfcad2;
   background-color: rgba(0, 0, 0, 0.03);

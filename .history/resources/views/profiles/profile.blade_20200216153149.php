@@ -7,7 +7,7 @@
     <div class="row justify-content-around">
         <div class="col-md-10">
             <div class="card">
-                <div class="card-header">プロフィール</div>
+            <div class="card-header">プロフィール</div>
                     <div class="card-body row pt-30">
                        
                         <div class="col-md-3 offset-md-1 ">
@@ -50,50 +50,47 @@
                             </form>
                           </div>
                         @endif   
-                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="mypost">
+<div>
   <h1 class="container pt-10">投稿一覧</h1>
-    @foreach ($sports as $sport)
-      <div class="row">
-        <div class="col-6">
-          <div class="row justify-content-around pb-5">
-            <div class="card col-md-9 my-sm-3" style="max-width: 550px;">
-              <div class="row">
-
-                <div class="col-md-4">
-                @if(!empty($sport->user->img_name))
-                  <div class='image-wrapper'><img src="{{ asset($sport->user->img_name) }}" class="card-img rounded-circle" alt=""> </div>
-                @else
-                  <div class='image-wrapper'><img src="{{ Gravatar::src($sport->user->email, 500) }}" class="card-img rounded-circle" alt=""> </div>
-                @endif
-                  <div class="card-text text-center">{{$sport->user->name}}</div> 
-                </div>
-
-                <div class="col-md-7 offset-md-1">
-                    <div class="card-header text-center"><a href="/home/{{ $sport->sport }}/person/{{$sport->user->id}}/{{ $sport->id }}">{{ $sport->caption }}</a></div>
-                    <div class="row justify-content-around">
-                      <div class="card-text"><a href="/home/{{ $sport->sport }}/person/{{$sport->user->id}}/{{ $sport->id }}">{{ $sport->place }}</a></div>
-                      <div class="card-text"><a href="/home/{{ $sport->sport }}/person/{{$sport->user->id}}/{{ $sport->id }}">{{ $sport->cost }}円</a></div>
-                    </div>
-                  <div class="text-left">
-                      自己紹介  
-                  </div> 
-                  <div class="">
-                    <div class="card-text">{{$sport->user->introduce}}</div>
-                  </div>
-                </div>
-
+  @foreach ($sports as $sport)
+  <div class="row">
+  <div class="col-6">
+    <div class="row justify-content-around pb-5">
+      <div class="card col-md-9 my-sm-3" style="max-width: 550px;">
+        <div class="row">
+          <div class="col-md-4">
+          @if(!empty($sport->user->img_name))
+            <div class='image-wrapper'><img src="{{ asset($sport->user->img_name) }}" class="card-img rounded-circle" alt=""> </div>
+          @else
+            <div class='image-wrapper'><img src="{{ Gravatar::src($sport->user->email, 500) }}" class="card-img rounded-circle" alt=""> </div>
+          @endif
+            <div class="card-text text-center">{{$sport->user->name}}</div> 
+          </div>
+          <div class="col-md-7 offset-md-1">
+            <div class="card-header text-center"><a href="/home/{{ $sport->sport }}/person/{{$sport->user->id}}/{{ $sport->id }}">{{ $sport->caption }}</a></div>
+              <div class="row justify-content-around">
+                <div class="card-text"><a href="/home/{{ $sport->sport }}/person/{{$sport->user->id}}/{{ $sport->id }}">{{ $sport->place }}</a></div>
+                <div class="card-text"><a href="/home/{{ $sport->sport }}/person/{{$sport->user->id}}/{{ $sport->id }}">{{ $sport->cost }}円</a></div>
               </div>
+            <div class="text-left">
+                自己紹介  
+            </div> 
+            <div class="">
+              <div class="card-text">{{$sport->user->introduce}}</div>
             </div>
           </div>
+
         </div>
       </div>
-  @endforeach
+    </div>
+  </div>
+  </div>
+@endforeach
 </div>
 
 
@@ -102,7 +99,7 @@
 <div class="row justify-content-center">
 {{ $sports->links() }}
 </div>
-
+</div>
 
 <a href="/home" class="row justify-content-center">戻る</a>
 @endsection
