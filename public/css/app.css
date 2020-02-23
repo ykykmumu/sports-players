@@ -11067,6 +11067,11 @@ main {
   font-size: 20px;
 }
 
+.myposttitle {
+  color: #17afcf;
+  font-weight: bold;
+}
+
 .create_content {
   border-bottom: 2px solid #bfcad2;
   background-color: rgba(0, 0, 0, 0.03);
